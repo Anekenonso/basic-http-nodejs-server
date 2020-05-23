@@ -1,4 +1,5 @@
 const http = require('http');
+const PORT = process.env.port || 5000
 
 const requestHandler = (req, res) => {
     res.writeHead(200);
@@ -6,4 +7,4 @@ const requestHandler = (req, res) => {
 }
 
 const server = http.createServer(requestHandler);
-server.listen(5000);
+server.listen(PORT);
